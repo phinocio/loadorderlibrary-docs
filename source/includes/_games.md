@@ -63,7 +63,7 @@ console.log(response.json()); // logs the below response.
 }
 ```
 
-This endpoint retrieves all lists.
+This endpoint retrieves all games.
 
 ### HTTP Request
 
