@@ -11,6 +11,7 @@ includes:
   - introduction
   - authentication
   - lists
+  - games
   - errors
 
 search: true
