@@ -11,7 +11,7 @@ const response = await fetch('https://api.loadorderlibrary.com/v1/games', {
 	}
 });
 
-console.log(response.json()); // logs the below response.
+console.log(await response.json()); // logs the below response.
 ```
 
 > The above command returns JSON structured like this
