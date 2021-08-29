@@ -483,7 +483,7 @@ All parameters can be used alone or together.
     <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span> <span class="c1">// logs the below response.</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span> <span class="c1">// logs the below response.</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this</p>
@@ -562,7 +562,7 @@ All parameters can be used alone or together.
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span> <span class="c1">// logs the below response.</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span> <span class="c1">// logs the below response.</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this</p>
@@ -652,7 +652,7 @@ All parameters can be used alone or together.
     <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span> <span class="c1">// logs the below response.</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span> <span class="c1">// logs the below response.</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this</p>
@@ -706,11 +706,7 @@ All parameters can be used alone or together.
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET https://api.loadorderlibrary.com/v1/games</code></p>
 <h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-<p>The Kittn API uses the following error codes:</p>
+<p>The Load Order Library API uses the following error codes:</p>
 
 <table><thead>
 <tr>
@@ -740,7 +736,7 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </tr>
 <tr>
 <td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>Too Many Requests -- You&#39;re requesting too many requests.</td>
 </tr>
 <tr>
 <td>500</td>
