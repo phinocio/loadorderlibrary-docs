@@ -182,6 +182,7 @@ const files = document.querySelector('input[type="file"][multiple]');
 formData.append('name', 'My New List');
 formData.append('game_id', 1);
 formData.append('is_private', 0); // optional, defaults to false.
+formData.append('expires_at', '24h'); // optional, defaults to 24h for anonymous lists.
 
 for (let i = 0; i < files.files.length; i++) {
   formData.append('files[]', files.files[i]);
@@ -205,11 +206,12 @@ console.log(await response.json()); // logs the below response.
     "data": {
         "name": "My New List",
         "version": null,
-        "slug": "my-new-list-8",
-        "url": "https://loadorderlibrary.com/lists/my-new-list-8",
+        "slug": "my-new-list",
+        "url": "https://testing.loadorderlibrary.com/lists/my-new-list",
         "private": false,
-        "created": 1625944732,
-        "updated": 1625944732,
+        "expires": 1630524048,
+        "created": 1630437648,
+        "updated": 1630437648,
         "author": null,
         "game": {
             "id": 1,
@@ -217,27 +219,31 @@ console.log(await response.json()); // logs the below response.
         },
         "files": [
             {
-                "name": "04ff9e544df36ef076bd26e8f42aeee4-plugins.txt",
-                "clean_name": "plugins.txt",
-                "bytes": 6404,
-                "created": 1624752048,
-                "updated": 1624752048
+                "name": "9f87e14d8aa888362776f88f995d08cd-Skyrim.ini",
+                "clean_name": "Skyrim.ini",
+                "bytes": 3117,
+                "created": 1630437398,
+                "updated": 1630437398
             },
             {
                 "name": "00acfcec29588e25041c76307b860016-modlist.txt",
                 "clean_name": "modlist.txt",
                 "bytes": 8420,
-                "created": 1624752076,
-                "updated": 1624752076
+                "created": 1630437398,
+                "updated": 1630437398
             },
             {
-                "name": "9f87e14d8aa888362776f88f995d08cd-Skyrim.ini",
-                "clean_name": "Skyrim.ini",
-                "bytes": 3117,
-                "created": 1624752076,
-                "updated": 1624752076
+                "name": "04ff9e544df36ef076bd26e8f42aeee4-plugins.txt",
+                "clean_name": "plugins.txt",
+                "bytes": 6404,
+                "created": 1630437398,
+                "updated": 1630437398
             }
-        ]
+        ],
+        "links": {
+            "url": "https://testing.loadorderlibrary.com/lists/my-new-list",
+            "self": "http://api.loadorderlibrary.localhost/v1/lists/my-new-list"
+        }
     }
 }
 ```
@@ -257,4 +263,5 @@ name | required | The name for the list.
 version | optional | The version for the list. Defaults to `null` when not provided.
 game_id | required | The id of the game the list is for.
 is_private | optional | Whether the list is private or not. Defaults to `false` when not provided.
-files[] | required | The files for the list. 
+files[] | required | The files for the list.
+expires_at | optional | When the list will expire. Accepted options are strings of `3h`, `24h`, `3d`, `1w`, and `perm`. Defaults to `24h` when `null` is provided.
