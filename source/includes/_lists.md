@@ -264,4 +264,4 @@ version | optional | The version for the list. Defaults to `null` when not provi
 game_id | required | The id of the game the list is for.
 is_private | optional | Whether the list is private or not. Defaults to `false` when not provided.
 files[] | required | The files for the list.
-expires_at | optional | When the list will expire. Accepted options are strings of `3h`, `24h`, `3d`, `1w`, and `perm`. Defaults to `24h` when `null` is provided.
+expires_at | optional | When the list will expire. Accepted options are strings of `3h`, `24h`, `3d`, `1w`, and `perm`. Defaults to `24h` when `null` or an invalid option is provided.
