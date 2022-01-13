@@ -58,7 +58,8 @@ console.log(await response.json()); // logs the below response.
         {
             "id": 10,
             "name": "Tale of Two Wastelands"
-        }
+        },
+		...
     ]
 }
 ```
@@ -68,3 +69,33 @@ This endpoint retrieves all games.
 ### HTTP Request
 
 `GET https://api.loadorderlibrary.com/v1/games`
+
+## List of Games
+ID | Name 
+-- | --
+1  | TESIII Morrowind
+2  | TESIV Oblivion
+3  | TESV Skyrim LE
+4  | TESV Skyrim SE
+5  | TESV Skyrim VR
+6  | Fallout 3
+7  | Fallout New Vegas
+8  | Fallout 4
+9  | Fallout 4 VR
+10 | Tale of Two Wastelands
+11 | Cyberpunk 2077
+12 | Darkest Dungeon
+13 | Dark Messiah of Might & Magic
+14 | Dark Souls
+15 | Dragon Age II
+16 | Dragon Age: Origins
+17 | Dungeon Siege II
+18 | Kerbal Space Program
+19 | Mirror's Edge
+21 | Mount & Blade II: Bannerlord
+22 | No Man's Sky
+23 | STALKER Anomaly
+24 | Stardew Valley
+25 | The Binding of Isaac: Rebirth
+26 | The Witcher 3: Wild Hunt
+27 | Zeus and Poseidon
